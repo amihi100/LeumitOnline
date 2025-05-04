@@ -1,5 +1,0 @@
-com/leumit/hooks/TestHooks.class
-com/leumit/runners/MobileTestRunner.class
-com/leumit/steps/MobileSteps.class
-com/leumit/runners/WebTestRunner.class
-com/leumit/steps/WebSteps.class
