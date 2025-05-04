@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.leumit.runners.WebTestRunner" time="11.252" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/user/IdeaProjects/LeumitOnline/target/test-classes:/Users/user/IdeaProjects/LeumitOnline/target/classes:/Users/user/.m2/repository/com/microsoft/playwright/playwright/1.40.0/playwright-1.40.0.jar:/Users/user/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/Users/user/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/user/.m2/repository/com/microsoft/playwright/driver/1.40.0/driver-1.40.0.jar:/Users/user/.m2/repository/com/microsoft/playwright/driver-bundle/1.40.0/driver-bundle-1.40.0.jar:/Users/user/.m2/repository/io/appium/java-client/9.0.0/java-client-9.0.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-api/4.32.0/selenium-api-4.32.0.jar:/Users/user/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.32.0/selenium-remote-driver-4.32.0.jar:/Users/user/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/user/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/Users/user/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/user/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/user/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/user/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-api/1.49.0/opentelemetry-api-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-context/1.49.0/opentelemetry-context-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.49.0/opentelemetry-exporter-logging-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.49.0/opentelemetry-sdk-common-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.49.0/opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.49.0/opentelemetry-sdk-extension-autoconfigure-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.49.0/opentelemetry-sdk-trace-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.49.0/opentelemetry-sdk-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.49.0/opentelemetry-sdk-metrics-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.49.0/opentelemetry-sdk-logs-1.49.0.jar:/Users/user/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-http/4.32.0/selenium-http-4.32.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-json/4.32.0/selenium-json-4.32.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.32.0/selenium-manager-4.32.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-os/4.32.0/selenium-os-4.32.0.jar:/Users/user/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-support/4.32.0/selenium-support-4.32.0.jar:/Users/user/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0.jar:/Users/user/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/user/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/user/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/user/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/user/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/Users/user/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/user/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/user/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/user/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/Users/user/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/user/.m2/repository/io/cucumber/cucumber-testng/7.14.0/cucumber-testng-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-picocontainer/7.14.0/cucumber-picocontainer-7.14.0.jar:/Users/user/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/user/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/Users/user/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/user/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/user/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/user/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/user/.m2/repository/org/apache/logging/log4j/log4j-api/2.22.0/log4j-api-2.22.0.jar:/Users/user/.m2/repository/org/apache/logging/log4j/log4j-core/2.22.0/log4j-core-2.22.0.jar:/Users/user/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.22.0/log4j-slf4j2-impl-2.22.0.jar:/Users/user/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/user/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/Users/user/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Asia/Jerusalem"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IL"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/user/IdeaProjects/LeumitOnline/target/surefire/surefirebooter-20250504143302829_3.jar /Users/user/IdeaProjects/LeumitOnline/target/surefire 2025-05-04T14-33-02_799-jvmRun1 surefire-20250504143302829_1tmp surefire_0-20250504143302829_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="WebTestRunner"/>
+    <property name="surefire.test.class.path" value="/Users/user/IdeaProjects/LeumitOnline/target/test-classes:/Users/user/IdeaProjects/LeumitOnline/target/classes:/Users/user/.m2/repository/com/microsoft/playwright/playwright/1.40.0/playwright-1.40.0.jar:/Users/user/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/Users/user/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/user/.m2/repository/com/microsoft/playwright/driver/1.40.0/driver-1.40.0.jar:/Users/user/.m2/repository/com/microsoft/playwright/driver-bundle/1.40.0/driver-bundle-1.40.0.jar:/Users/user/.m2/repository/io/appium/java-client/9.0.0/java-client-9.0.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-api/4.32.0/selenium-api-4.32.0.jar:/Users/user/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.32.0/selenium-remote-driver-4.32.0.jar:/Users/user/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/user/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/Users/user/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/user/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/user/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/user/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-api/1.49.0/opentelemetry-api-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-context/1.49.0/opentelemetry-context-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.49.0/opentelemetry-exporter-logging-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.49.0/opentelemetry-sdk-common-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.49.0/opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.49.0/opentelemetry-sdk-extension-autoconfigure-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.49.0/opentelemetry-sdk-trace-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.49.0/opentelemetry-sdk-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.49.0/opentelemetry-sdk-metrics-1.49.0.jar:/Users/user/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.49.0/opentelemetry-sdk-logs-1.49.0.jar:/Users/user/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-http/4.32.0/selenium-http-4.32.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-json/4.32.0/selenium-json-4.32.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.32.0/selenium-manager-4.32.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-os/4.32.0/selenium-os-4.32.0.jar:/Users/user/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/user/.m2/repository/org/seleniumhq/selenium/selenium-support/4.32.0/selenium-support-4.32.0.jar:/Users/user/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0.jar:/Users/user/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/user/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/user/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/Users/user/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/Users/user/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/Users/user/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/user/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/Users/user/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/Users/user/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/Users/user/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/user/.m2/repository/io/cucumber/cucumber-testng/7.14.0/cucumber-testng-7.14.0.jar:/Users/user/.m2/repository/io/cucumber/cucumber-picocontainer/7.14.0/cucumber-picocontainer-7.14.0.jar:/Users/user/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/user/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar:/Users/user/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar:/Users/user/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/user/.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar:/Users/user/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/Users/user/.m2/repository/org/apache/logging/log4j/log4j-api/2.22.0/log4j-api-2.22.0.jar:/Users/user/.m2/repository/org/apache/logging/log4j/log4j-core/2.22.0/log4j-core-2.22.0.jar:/Users/user/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.22.0/log4j-slf4j2-impl-2.22.0.jar:/Users/user/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/user/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/Users/user/.m2/repository/commons-io/commons-io/2.15.1/commons-io-2.15.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/user"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/user/IdeaProjects/LeumitOnline"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/user/IdeaProjects/LeumitOnline/target/surefire/surefirebooter-20250504143302829_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="23.0.2"/>
+    <property name="user.name" value="user"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.4.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/user/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/l4/v7lntp957kb_p978csj0qfj40000gn/T/"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="cucumber.filter.tags" value="@web"/>
+    <property name="user.dir" value="/Users/user/IdeaProjects/LeumitOnline"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/user/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="23.0.2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;Page title verification&quot;, &quot;Basic Web Server Tests&quot;](1)" classname="com.leumit.runners.WebTestRunner" time="4.173">
+    <system-out><![CDATA[14:33:03.385 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_143303.html
+
+@web @ui
+Scenario: Login fields should be visible                                       # src/test/resources/features/web/basic_web_client_tests.feature:14
+
+@web @performance
+Scenario: Performance testing                                # src/test/resources/features/web/basic_web_server_tests.feature:4
+
+@web
+Scenario: Page title verification              # src/test/resources/features/web/basic_web_server_tests.feature:10
+
+@web @ui
+Scenario: Navigate to home page                # src/test/resources/features/web/basic_web_client_tests.feature:4
+
+@web @ui
+Scenario: Logo should be visible               # src/test/resources/features/web/basic_web_client_tests.feature:9
+14:33:03.442 [TestNG-PoolService-4] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+14:33:03.444 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+14:33:03.444 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+14:33:03.444 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+14:33:03.444 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+14:33:03.444 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+14:33:03.446 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+14:33:03.446 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+14:33:03.446 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+14:33:03.446 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+14:33:03.446 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+14:33:04.467 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+14:33:04.471 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+14:33:04.836 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+14:33:05.021 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+14:33:05.021 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+14:33:05.022 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+14:33:05.022 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+14:33:05.124 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+14:33:05.124 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+14:33:05.409 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+14:33:05.576 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+14:33:05.576 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+14:33:05.577 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+14:33:05.577 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+14:33:05.680 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+14:33:05.680 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+14:33:05.983 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+14:33:06.149 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+14:33:06.149 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+14:33:06.150 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+14:33:06.150 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+14:33:06.256 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+14:33:06.256 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+14:33:06.568 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+14:33:06.833 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+14:33:06.833 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+14:33:06.834 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+14:33:06.834 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+14:33:06.947 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+14:33:06.947 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+14:33:07.306 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+  Given I open the URL "https://leumit.co.il/" # com.leumit.steps.WebSteps.iOpenTheURL(java.lang.String)
+14:33:07.443 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+14:33:07.447 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+  Then The page title should contain "לאומית"  # com.leumit.steps.WebSteps.thePageTitleShouldContain(java.lang.String)
+14:33:07.448 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+14:33:07.483 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+14:33:07.483 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+14:33:07.483 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+14:33:07.483 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+14:33:07.498 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+14:33:07.572 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+  And I close the browser                      # com.leumit.steps.WebSteps.iCloseTheBrowser()
+14:33:07.572 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+14:33:07.572 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+  Then Assert browser is closed                # com.leumit.steps.WebSteps.assertBrowserIsClosed()
+14:33:07.573 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Performance testing&quot;, &quot;Basic Web Server Tests&quot;](2)" classname="com.leumit.runners.WebTestRunner" time="4.309">
+    <system-out><![CDATA[  Given I open the URL "https://leumit.co.il/"               # com.leumit.steps.WebSteps.iOpenTheURL(java.lang.String)
+14:33:07.644 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+14:33:07.644 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+  Then The page title should contain "לאומית"                # com.leumit.steps.WebSteps.thePageTitleShouldContain(java.lang.String)
+14:33:07.644 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+14:33:07.648 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 2033 ms
+14:33:07.649 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page loaded in less than 10000 milliseconds (actual: 2033 ms)
+  And The page should load in less than "10000" milliseconds # com.leumit.steps.WebSteps.thePageShouldLoadInLessThanMilliseconds(java.lang.String)
+14:33:07.659 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+14:33:07.710 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+14:33:07.710 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Navigate to home page&quot;, &quot;Basic Web Client UI Checks&quot;](3)" classname="com.leumit.runners.WebTestRunner" time="6.112">
+    <system-out><![CDATA[  Given I open the URL "https://leumit.co.il/" # com.leumit.steps.WebSteps.iOpenTheURL(java.lang.String)
+14:33:09.442 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+14:33:09.442 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+  Then The page title should contain "לאומית"  # com.leumit.steps.WebSteps.thePageTitleShouldContain(java.lang.String)
+14:33:09.463 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+14:33:09.513 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+14:33:09.513 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Logo should be visible&quot;, &quot;Basic Web Client UI Checks&quot;](4)" classname="com.leumit.runners.WebTestRunner" time="9.379">
+    <system-out><![CDATA[  Given I open the URL "https://leumit.co.il/" # com.leumit.steps.WebSteps.iOpenTheURL(java.lang.String)
+14:33:12.700 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+14:33:12.700 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+14:33:12.711 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+  Then The logo at "img" should be visible     # com.leumit.steps.WebSteps.theLogoShouldBeVisible(java.lang.String)
+14:33:12.727 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+14:33:12.780 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+14:33:12.780 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Login fields should be visible&quot;, &quot;Basic Web Client UI Checks&quot;](5)" classname="com.leumit.runners.WebTestRunner" time="10.638">
+    <system-out><![CDATA[  Given I open the URL "https://www.leumit.co.il/"                             # com.leumit.steps.WebSteps.iOpenTheURL(java.lang.String)
+14:33:13.953 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+14:33:13.953 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+14:33:13.953 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+14:33:13.969 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+14:33:13.969 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+  Then The identification field "input[name='IdNumTextBox']" should be visible # com.leumit.steps.WebSteps.theIdentificationFieldShouldBeVisible(java.lang.String)
+14:33:13.969 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+14:33:13.969 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+14:33:13.969 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+14:33:13.971 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+14:33:13.972 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+  And The password field "input[name='PasswordTextBox']" should be visible     # com.leumit.steps.WebSteps.thePasswordFieldShouldBeVisible(java.lang.String)
+14:33:13.985 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+14:33:14.039 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+14:33:14.039 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+]]></system-out>
+  </testcase>
+</testsuite>
