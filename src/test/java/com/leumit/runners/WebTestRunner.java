@@ -16,11 +16,11 @@ import org.testng.annotations.DataProvider;
         "json:target/cucumber-reports/web-report.json",
         "junit:target/cucumber-reports/web-report.xml",
         "timeline:target/cucumber-reports/web-timeline",
-        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         "rerun:target/failed_scenarios.txt"
     },
     monochrome = true,
-    tags = "@web"
+    tags = "@web",
+    name = "WebTest"
 )
 public class WebTestRunner extends AbstractTestNGCucumberTests {
     

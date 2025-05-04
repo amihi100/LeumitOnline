@@ -1185,3 +1185,955 @@ Caused by: com.microsoft.playwright.impl.DriverException: Error {
 14:33:14.039 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
 14:33:14.040 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
 14:33:14.131 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:07:27.574 [TestNG-test=Surefire test-1] WARN  org.testng.internal.Utils - The test method 'io.cucumber.testng.AbstractTestNGCucumberTests.runScenario' will be skipped since its data provider 'scenarios' returned an empty array or iterator. 
+15:08:16.524 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_150816.html
+15:08:16.987 [TestNG-PoolService-4] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:08:17.043 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:08:17.053 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:08:17.055 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:08:17.073 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:08:17.081 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:08:17.122 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:08:21.996 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:08:22.029 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:08:23.826 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:08:25.672 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:08:25.673 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:08:25.676 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:08:25.677 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:08:25.676 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: FAILED
+15:08:26.636 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:08:26.637 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:08:31.447 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:08:33.518 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:08:33.528 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:08:34.143 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:08:34.419 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:08:34.424 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:08:34.424 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:08:34.424 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:08:34.428 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: FAILED
+15:08:39.675 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:08:39.676 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:08:41.107 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:08:41.109 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:08:44.090 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:08:46.144 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:08:46.148 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:08:46.148 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:08:46.149 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:08:46.463 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:08:53.606 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:08:53.613 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:08:53.670 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:08:57.129 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:08:57.131 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:08:57.286 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:08:59.707 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:08:59.708 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:08:59.929 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:09:01.148 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:09:01.154 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:09:01.156 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:09:01.157 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:09:01.182 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:09:02.259 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:11:38.200 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_151137.html
+15:11:40.394 [TestNG-PoolService-0] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:11:40.478 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+15:11:40.502 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:11:40.504 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:11:40.511 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:11:40.525 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:11:40.501 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:11:40.528 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:11:40.551 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:11:40.561 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+15:11:40.563 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:11:46.799 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:11:46.827 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:11:48.840 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:11:50.563 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:11:50.570 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:11:50.576 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:11:50.576 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:11:51.302 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+15:11:51.304 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:11:53.383 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+15:11:58.422 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:11:58.423 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+15:11:58.424 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:11:58.424 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:12:01.688 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:12:01.746 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:12:04.114 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+15:12:04.136 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:12:06.687 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:12:06.688 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:12:06.695 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:12:06.746 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 7786 ms
+15:12:06.770 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page loaded in less than 10000 milliseconds (actual: 7786 ms)
+15:12:09.271 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+15:12:11.142 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:12:11.143 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+15:12:11.145 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+15:12:11.145 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+15:12:12.390 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:12:12.391 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:12:17.497 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:12:19.596 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:12:19.634 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:12:19.636 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:12:19.638 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:12:24.140 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+15:12:24.141 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+15:12:24.141 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:12:25.057 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+15:12:25.058 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+15:12:25.061 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+15:12:25.061 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+15:12:25.062 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:12:25.139 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+15:12:25.140 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+15:12:27.159 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:12:27.161 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:12:27.814 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:12:27.815 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:12:27.818 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:12:30.429 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:12:32.854 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:12:32.855 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:12:32.860 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:12:32.861 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:12:33.082 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:12:38.911 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:12:38.912 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:12:38.984 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:12:42.037 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:12:42.040 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:12:42.040 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:12:42.196 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+15:12:44.283 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+15:12:44.293 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:12:44.564 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+15:12:47.258 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+15:12:47.261 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:12:47.484 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:12:48.511 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:12:48.519 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:12:48.521 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:12:48.984 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:12:52.332 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:12:52.332 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:12:52.390 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:12:52.988 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:19:05.717 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_151905.html
+15:19:06.343 [TestNG-PoolService-3] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:19:06.345 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:19:06.346 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:19:06.346 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:19:06.345 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:19:06.346 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:19:06.352 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:19:06.352 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:19:06.351 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:19:06.354 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:19:06.354 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:19:06.354 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:19:06.346 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:19:06.353 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:19:06.357 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:19:06.357 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:19:06.357 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:19:06.352 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:19:06.360 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:19:06.360 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:19:06.353 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:19:06.374 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:19:06.375 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:19:06.377 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:19:06.375 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+15:19:06.377 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:19:06.383 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:19:06.388 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:19:06.390 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:19:06.393 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+15:19:06.404 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:19:11.419 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:19:11.451 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:19:13.319 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:19:15.146 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:19:15.147 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:19:15.149 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:19:15.155 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:19:16.027 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:19:16.028 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:19:19.423 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:19:21.992 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:19:21.993 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:19:21.994 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:19:21.997 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:19:25.456 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:19:25.475 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:19:25.919 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:19:27.465 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+15:19:27.466 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:19:29.309 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:19:29.314 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:19:29.317 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:19:31.333 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+15:19:33.627 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:19:33.629 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+15:19:33.630 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+15:19:33.630 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+15:19:36.674 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:19:36.677 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:19:40.131 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+15:19:40.132 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+15:19:40.136 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:19:40.409 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+15:19:40.410 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+15:19:40.441 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+15:19:40.442 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+15:19:40.442 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:19:40.502 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+15:19:40.516 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+15:19:41.464 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:19:43.544 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:19:43.545 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:19:43.545 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:19:43.546 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:19:47.419 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+15:19:47.422 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:19:50.728 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:19:50.730 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:19:52.174 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+15:19:55.893 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:19:55.894 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+15:19:55.894 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:19:55.895 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:19:56.093 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:20:01.606 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:20:01.607 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:20:01.609 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:20:01.708 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 4904 ms
+15:20:01.718 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page loaded in less than 10000 milliseconds (actual: 4904 ms)
+15:20:04.065 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:20:04.069 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:20:04.282 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+15:20:05.303 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+15:20:05.304 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:20:05.497 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:20:06.731 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:20:06.740 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:20:06.744 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:20:06.872 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:20:07.516 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:20:07.518 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:20:07.518 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:20:07.705 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+15:20:08.465 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+15:20:08.477 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:20:08.496 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:20:09.669 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:20:39.885 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_152039.html
+15:20:40.466 [TestNG-PoolService-4] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:20:40.486 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:20:40.487 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:20:40.487 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:20:40.488 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:20:40.489 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:20:40.490 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:20:40.490 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:20:40.490 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:20:40.494 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:20:40.495 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:20:40.495 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:20:40.496 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:20:40.529 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:20:40.538 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:20:40.544 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:20:40.544 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:20:40.545 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:20:40.545 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:20:40.545 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:20:40.546 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+15:20:40.543 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:20:40.554 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:20:40.554 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:20:40.555 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:20:40.555 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:20:40.557 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:20:40.557 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:20:40.560 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:20:40.561 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:20:40.562 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+15:20:46.187 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+15:20:46.230 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:20:48.204 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+15:20:49.864 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:20:49.865 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+15:20:49.870 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:20:49.871 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:20:50.760 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:20:50.761 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:20:57.590 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:21:00.823 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:21:00.833 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:21:00.833 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:21:00.833 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:21:00.835 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:21:01.006 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:21:01.017 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:21:01.048 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 10274 ms
+15:21:04.604 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+15:21:04.606 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:21:06.752 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:21:06.756 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:21:06.763 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:21:08.447 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+15:21:10.560 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:21:10.561 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+15:21:10.561 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+15:21:10.562 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+15:21:12.952 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:21:12.952 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:21:17.209 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+15:21:17.210 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+15:21:17.210 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:21:17.375 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+15:21:17.376 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+15:21:17.383 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+15:21:17.383 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+15:21:17.383 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:21:17.795 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+15:21:17.815 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+15:21:18.157 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:21:20.535 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:21:20.535 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:21:20.536 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:21:20.536 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:21:21.468 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:21:21.469 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:21:26.780 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:21:26.781 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:21:27.781 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:21:30.082 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:21:30.087 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:21:30.087 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:21:30.087 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:21:30.504 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:21:36.214 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:21:36.215 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:21:36.321 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:21:38.308 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:21:38.311 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:21:38.506 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+15:21:40.174 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+15:21:40.176 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:21:40.364 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:21:40.945 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:21:40.947 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:21:40.953 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:21:41.194 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:21:41.796 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Captured web screenshot: target/screenshots/screenshot_20250504_152101.png
+15:21:41.808 [TestNG-PoolService-3] ERROR com.leumit.utils.AssertUtils - Page loaded in more than 10000 milliseconds (actual: 10274 ms): expected [10274] to be less than [10000]
+15:21:41.820 [TestNG-PoolService-3] ERROR com.leumit.hooks.TestHooks - Scenario failed: Performance testing
+15:21:42.522 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:21:42.522 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:21:42.713 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+15:21:46.209 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+15:21:46.210 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: FAILED
+15:21:46.210 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:21:46.247 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:21:47.129 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:22:18.372 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_152217.html
+15:22:19.289 [TestNG-PoolService-3] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:22:19.296 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:22:19.297 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:22:19.302 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:22:19.303 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:22:19.303 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:22:19.299 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:22:19.315 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:22:19.315 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:22:19.316 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:22:19.302 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:22:19.319 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:22:19.320 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:22:19.320 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:22:19.320 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:22:19.303 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:22:19.336 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:22:19.320 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:22:19.346 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:22:19.347 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:22:19.348 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:22:19.372 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+15:22:19.381 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:22:19.383 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:22:19.397 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:22:19.400 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:22:19.426 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:22:19.448 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:22:19.451 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:22:19.467 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:22:19.493 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+15:22:24.880 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:22:24.906 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:22:26.598 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:22:28.208 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:22:28.210 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:22:28.213 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:22:28.214 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:22:29.411 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+15:22:29.412 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:22:34.828 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+15:22:35.041 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:22:35.117 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:22:36.707 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:22:36.708 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+15:22:36.709 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+15:22:36.709 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+15:22:38.692 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+15:22:38.695 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:22:43.078 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+15:22:43.078 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+15:22:43.078 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:22:43.319 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+15:22:43.987 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+15:22:44.169 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+15:22:44.179 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+15:22:44.360 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:22:44.507 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+15:22:45.056 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+15:22:45.057 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+15:22:47.478 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:22:47.479 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+15:22:47.480 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:22:47.484 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:22:48.822 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:22:48.823 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:22:52.031 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:22:58.290 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:22:58.291 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:22:58.292 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:22:58.294 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:23:02.291 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:23:02.311 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:23:02.319 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:23:02.438 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 13305 ms
+15:23:05.859 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:23:05.862 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:23:06.581 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:23:06.583 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:23:06.587 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:23:09.509 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:23:11.817 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:23:11.818 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:23:11.818 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:23:11.818 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:23:12.125 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:23:13.583 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:23:13.587 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:23:13.590 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:23:14.003 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+15:23:14.887 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Captured web screenshot: target/screenshots/screenshot_20250504_152302.png
+15:23:14.917 [TestNG-PoolService-3] ERROR com.leumit.utils.AssertUtils - Page loaded in more than 10000 milliseconds (actual: 13305 ms): expected [13305] to be less than [10000]
+15:23:14.933 [TestNG-PoolService-3] ERROR com.leumit.hooks.TestHooks - Scenario failed: Performance testing
+15:23:19.809 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:23:19.810 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:23:19.934 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:23:21.909 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+15:23:21.913 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:23:22.082 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:23:22.942 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:23:22.943 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:23:23.157 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:23:24.028 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:23:24.028 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:23:24.387 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+15:23:25.806 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+15:23:25.807 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: FAILED
+15:23:25.810 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:23:25.943 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:23:30.589 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:31:09.437 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_153109.html
+15:31:09.737 [TestNG-PoolService-3] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:31:09.739 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:31:09.739 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:31:09.740 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:31:09.740 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:31:09.743 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:31:09.744 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:31:09.745 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:31:09.745 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:31:09.743 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:31:09.745 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:31:09.745 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:31:09.746 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:31:09.745 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:31:09.747 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:31:09.748 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:31:09.748 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:31:09.747 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:31:09.756 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:31:09.756 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:31:09.757 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:31:09.763 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:31:09.760 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:31:09.762 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+15:31:09.763 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:31:09.763 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:31:09.768 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:31:09.769 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:31:09.769 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:31:09.769 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+15:31:09.770 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:31:12.714 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:31:12.732 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:31:14.078 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:31:15.528 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:31:15.529 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:31:15.533 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:31:15.533 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:31:16.581 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+15:31:16.582 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:31:19.835 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+15:31:22.619 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:31:22.901 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:31:22.909 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:31:22.910 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:31:22.910 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+15:31:22.911 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+15:31:22.914 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+15:31:29.616 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:31:29.634 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:31:30.892 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+15:31:30.894 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+15:31:30.894 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:31:31.021 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+15:31:31.022 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+15:31:31.030 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+15:31:31.032 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+15:31:31.032 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:31:31.096 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+15:31:31.098 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+15:31:32.150 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:31:33.869 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:31:33.875 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:31:33.875 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:31:33.876 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:31:35.123 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+15:31:35.125 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:31:39.467 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+15:31:42.791 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:31:42.794 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+15:31:42.795 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:31:42.795 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:31:46.095 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:31:46.096 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:31:51.589 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:31:51.598 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:31:51.648 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:31:51.839 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 8013 ms
+15:31:51.860 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page loaded in less than 10000 milliseconds (actual: 8013 ms)
+15:31:51.952 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:31:51.954 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:31:56.525 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:31:59.197 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:31:59.198 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:31:59.198 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:31:59.199 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:31:59.547 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+15:32:05.964 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:32:05.964 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:32:06.472 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:32:11.013 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+15:32:11.016 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:32:11.389 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:32:12.232 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:32:12.232 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:32:12.455 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+15:32:13.435 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+15:32:13.437 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:32:13.631 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:32:14.685 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:32:14.688 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:32:14.689 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:32:14.887 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:32:15.698 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:32:15.703 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:32:15.703 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:32:15.712 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:32:17.345 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Created 2 feature nodes in the report
+15:32:17.355 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:32:17.374 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:32:17.375 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:38:43.933 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_153843.html
+15:38:43.991 [TestNG-PoolService-1] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:38:43.992 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:38:43.992 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:38:43.992 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:38:43.992 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:38:43.992 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:38:43.992 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:38:43.992 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:38:43.992 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:38:43.992 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:38:43.992 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:38:43.992 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:38:43.992 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:38:43.992 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:38:43.992 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:38:43.992 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:38:43.992 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:38:43.992 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:38:43.992 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:38:43.992 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:38:43.992 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:38:43.994 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:38:43.994 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:38:43.994 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:38:43.994 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+15:38:43.994 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:38:43.995 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+15:38:43.995 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:38:43.995 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:38:43.995 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:38:43.995 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:38:45.018 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+15:38:45.023 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:38:45.427 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+15:38:45.676 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:38:45.676 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+15:38:45.676 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+15:38:45.677 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+15:38:45.782 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:38:45.782 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:38:46.065 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:38:46.301 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:38:46.301 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:38:46.301 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:38:46.301 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:38:46.404 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:38:46.404 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:38:46.692 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:38:46.933 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:38:46.934 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:38:46.934 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:38:46.934 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:38:47.037 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+15:38:47.037 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:38:47.349 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+15:38:47.601 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:38:47.601 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+15:38:47.602 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:38:47.602 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:38:47.734 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:38:47.735 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:38:48.063 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:38:48.258 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+15:38:48.259 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+15:38:48.259 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:38:48.283 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:38:48.284 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:38:48.284 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:38:48.284 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:38:48.302 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+15:38:48.304 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+15:38:48.304 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+15:38:48.304 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+15:38:48.305 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:38:48.308 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+15:38:48.308 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+15:38:48.325 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+15:38:48.406 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+15:38:48.406 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:38:48.515 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:38:48.516 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:38:48.531 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:38:48.585 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:38:48.585 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:38:49.018 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:38:49.018 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:38:49.019 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:38:49.033 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:38:49.084 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:38:49.084 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:38:49.084 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:38:49.085 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:38:49.569 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:38:49.569 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:38:49.569 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:38:49.573 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 1931 ms
+15:38:49.574 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page loaded in less than 10000 milliseconds (actual: 1931 ms)
+15:38:49.585 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+15:38:49.639 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+15:38:49.639 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:38:50.717 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:38:50.717 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:38:50.729 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:38:50.748 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:38:50.796 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:38:50.796 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:38:50.798 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:38:50.891 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Created 2 feature nodes in the report
+15:38:50.891 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:38:50.891 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:38:50.891 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ProcessedScenarios size: 5
+15:38:50.891 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:40:13.449 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_154013.html
+15:40:13.509 [TestNG-PoolService-3] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:40:13.509 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:40:13.510 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:40:13.510 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:40:13.510 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:40:13.510 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:40:13.510 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:40:13.510 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:40:13.510 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:40:13.510 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:40:13.510 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:40:13.510 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:40:13.510 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:40:13.510 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:40:13.510 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:40:13.510 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:40:13.510 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:40:13.510 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:40:13.510 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:40:13.510 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:40:13.510 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:40:13.512 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:40:13.512 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+15:40:13.512 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:40:13.512 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:40:13.512 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:40:13.513 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:40:13.513 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:40:13.513 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:40:13.513 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:40:13.513 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+15:40:14.523 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:40:14.528 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:40:14.920 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:40:15.170 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:40:15.171 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:40:15.171 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:40:15.171 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:40:15.270 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:40:15.270 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:40:15.535 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:40:15.775 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:40:15.775 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:40:15.775 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:40:15.775 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:40:15.878 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:40:15.878 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:40:16.154 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:40:16.399 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:40:16.399 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:40:16.400 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:40:16.400 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:40:16.506 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+15:40:16.506 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:40:16.806 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+15:40:17.058 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:40:17.059 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+15:40:17.059 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+15:40:17.059 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+15:40:17.148 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:40:17.148 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:40:17.162 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:40:17.185 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+15:40:17.185 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:40:17.484 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+15:40:17.733 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:40:17.733 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+15:40:17.733 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:40:17.733 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:40:17.758 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:40:17.794 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:40:17.794 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:40:17.822 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:40:17.823 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:40:17.835 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:40:17.888 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:40:17.888 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:40:18.818 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:40:18.818 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:40:18.819 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:40:18.836 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:40:18.887 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:40:18.888 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:40:18.888 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:40:18.888 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:40:19.691 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+15:40:19.691 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+15:40:19.691 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:40:19.705 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+15:40:19.706 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+15:40:19.706 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+15:40:19.706 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+15:40:19.706 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:40:19.708 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+15:40:19.708 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+15:40:19.718 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+15:40:19.777 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+15:40:19.777 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:40:20.171 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:40:20.171 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:40:20.171 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:40:20.174 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 2396 ms
+15:40:20.175 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page loaded in less than 10000 milliseconds (actual: 2396 ms)
+15:40:20.195 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+15:40:20.247 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+15:40:20.247 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:40:20.248 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:40:20.338 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Created 2 feature nodes in the report
+15:40:20.338 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:40:20.338 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:40:20.338 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ProcessedScenarios size: 5
+15:40:20.338 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:43:58.212 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_154358.html
+15:43:58.271 [TestNG-PoolService-2] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:43:58.271 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:43:58.271 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:43:58.271 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:43:58.271 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:43:58.272 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:43:58.272 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:43:58.272 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:43:58.271 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:43:58.272 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:43:58.271 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:43:58.272 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:43:58.272 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:43:58.272 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:43:58.272 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:43:58.272 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_client_tests.feature
+15:43:58.272 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:43:58.272 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:43:58.272 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_client_tests
+15:43:58.272 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:43:58.272 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Client Tests
+15:43:58.274 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Page title verification
+15:43:58.274 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Login fields should be visible
+15:43:58.274 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Logo should be visible
+15:43:58.274 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:43:58.274 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Navigate to home page
+15:43:58.275 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:43:58.275 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Opening URL: https://www.leumit.co.il/
+15:43:58.275 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:43:58.275 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:43:58.275 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:43:59.310 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 41
+15:43:59.315 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:43:59.730 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 41
+15:43:59.981 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:43:59.981 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 41
+15:43:59.982 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:43:59.982 [TestNG-PoolService-3] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:44:00.086 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 40
+15:44:00.087 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:44:00.372 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 40
+15:44:00.611 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:44:00.612 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 40
+15:44:00.612 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://www.leumit.co.il/
+15:44:00.612 [TestNG-PoolService-2] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://www.leumit.co.il/
+15:44:00.717 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 42
+15:44:00.718 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:44:01.014 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 42
+15:44:01.243 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:44:01.243 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 42
+15:44:01.243 [TestNG-PoolService-4] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:44:01.243 [TestNG-PoolService-4] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:44:01.346 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 39
+15:44:01.346 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:44:01.639 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 39
+15:44:01.893 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:44:01.893 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 39
+15:44:01.893 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:44:01.893 [TestNG-PoolService-1] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:44:02.003 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:44:02.004 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:44:02.330 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:44:02.578 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:44:02.578 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:44:02.578 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:44:02.578 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:44:02.608 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if identification field is visible at: input[name='IdNumTextBox']
+15:44:02.608 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if identification field is visible
+15:44:02.609 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:44:02.627 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found identification field in frame: loginIframe
+15:44:02.629 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Identification field is visible
+15:44:02.629 [TestNG-PoolService-2] INFO  com.leumit.steps.WebSteps - Checking if password field is visible at: input[name='PasswordTextBox']
+15:44:02.629 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Checking if password field is visible
+15:44:02.629 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Multiple frames detected, attempting to search in all frames
+15:44:02.631 [TestNG-PoolService-2] INFO  com.leumit.pages.web.LeumitHomePage - Found password field in frame: loginIframe
+15:44:02.632 [TestNG-PoolService-2] INFO  com.leumit.utils.AssertUtils - Password field is visible
+15:44:02.646 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 40
+15:44:02.705 [TestNG-PoolService-2] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 40
+15:44:02.705 [TestNG-PoolService-2] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:44:03.719 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:44:03.719 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:44:03.720 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Closing the browser
+15:44:03.740 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 42
+15:44:03.806 [TestNG-PoolService-4] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 42
+15:44:03.806 [TestNG-PoolService-4] INFO  com.leumit.steps.WebSteps - Verifying browser is closed
+15:44:03.806 [TestNG-PoolService-4] INFO  com.leumit.utils.AssertUtils - Browser successfully closed
+15:44:03.806 [TestNG-PoolService-4] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:44:03.928 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:44:03.928 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:44:03.929 [TestNG-PoolService-3] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:44:03.933 [TestNG-PoolService-3] INFO  com.leumit.steps.WebSteps - Page load time: 3904 ms
+15:44:03.935 [TestNG-PoolService-3] INFO  com.leumit.utils.AssertUtils - Page loaded in less than 10000 milliseconds (actual: 3904 ms)
+15:44:03.947 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 41
+15:44:04.002 [TestNG-PoolService-3] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 41
+15:44:04.002 [TestNG-PoolService-3] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:44:04.502 [TestNG-PoolService-1] INFO  com.leumit.steps.WebSteps - Checking if logo is visible at: img
+15:44:04.502 [TestNG-PoolService-1] INFO  com.leumit.pages.web.LeumitHomePage - Checking if logo is visible
+15:44:04.514 [TestNG-PoolService-1] INFO  com.leumit.utils.AssertUtils - Logo is visible
+15:44:04.528 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 39
+15:44:04.583 [TestNG-PoolService-1] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 39
+15:44:04.584 [TestNG-PoolService-1] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:44:04.742 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:44:04.743 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:44:04.759 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:44:04.809 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:44:04.810 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:44:04.812 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:44:04.905 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Created 2 feature nodes in the report
+15:44:04.906 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:44:04.906 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_client_tests.feature
+15:44:04.906 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ProcessedScenarios size: 5
+15:44:04.906 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.
+15:45:35.171 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports initialized with report: target/extent-reports/cucumber_report_20250504_154535.html
+15:45:35.218 [TestNG-PoolService-0] INFO  com.leumit.config.ConfigManager - Loaded properties from: src/test/resources/config/config.properties
+15:45:35.218 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Feature path from scenario: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:45:35.218 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Extracted fileName: basic_web_server_tests.feature
+15:45:35.218 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - After removing .feature: basic_web_server_tests
+15:45:35.219 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Formatted feature name: Basic Web Server Tests
+15:45:35.220 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Starting web scenario: Performance testing
+15:45:35.221 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Opening URL: https://leumit.co.il/
+15:45:36.236 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright instance for thread: 38
+15:45:36.240 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Creating chrome browser, headless: false
+15:45:36.654 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Browser for thread: 38
+15:45:36.835 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverFactory - Created Playwright page with timeout: 30000ms
+15:45:36.835 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Created new Playwright Page for thread: 38
+15:45:36.835 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Opening Leumit home page: https://leumit.co.il/
+15:45:36.835 [TestNG-PoolService-0] INFO  com.leumit.pages.web.BasePageWeb - Navigating to URL: https://leumit.co.il/
+15:45:38.757 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Actual page title: אתר לאומית שירותי בריאות | קופת חולים לאומית
+15:45:38.760 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page title contains expected text: לאומית
+15:45:38.760 [TestNG-PoolService-0] INFO  com.leumit.pages.web.LeumitHomePage - Measuring page load time
+15:45:38.763 [TestNG-PoolService-0] INFO  com.leumit.steps.WebSteps - Page load time: 1888 ms
+15:45:38.764 [TestNG-PoolService-0] INFO  com.leumit.utils.AssertUtils - Page loaded in less than 10000 milliseconds (actual: 1888 ms)
+15:45:38.785 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Page for thread: 38
+15:45:38.840 [TestNG-PoolService-0] INFO  com.leumit.drivers.DriverManager - Closed Browser for thread: 38
+15:45:38.841 [TestNG-PoolService-0] INFO  com.leumit.hooks.TestHooks - Web scenario completed with status: PASSED
+15:45:38.844 [TestNG-test=Surefire test-1] INFO  com.leumit.drivers.DriverManager - Closed all drivers for thread: 35
+15:45:38.931 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Created 1 feature nodes in the report
+15:45:38.931 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - Feature URI: file:///Users/user/IdeaProjects/LeumitOnline/src/test/resources/features/web/basic_web_server_tests.feature
+15:45:38.931 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ProcessedScenarios size: 1
+15:45:38.931 [TestNG-test=Surefire test-1] INFO  com.leumit.hooks.TestHooks - ExtentReports flushed and completed.

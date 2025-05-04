@@ -16,11 +16,11 @@ import org.testng.annotations.DataProvider;
         "json:target/cucumber-reports/mobile-report.json",
         "junit:target/cucumber-reports/mobile-report.xml",
         "timeline:target/cucumber-reports/mobile-timeline",
-        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         "rerun:target/failed_scenarios.txt"
     },
     monochrome = true,
-    tags = "@mobile"
+    tags = "@mobile",
+    name = "MobileTest"
 )
 public class MobileTestRunner extends AbstractTestNGCucumberTests {
     

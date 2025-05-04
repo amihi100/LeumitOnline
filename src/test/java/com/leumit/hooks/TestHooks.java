@@ -3,6 +3,7 @@ package com.leumit.hooks;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.leumit.config.ConfigManager;
 import com.leumit.context.TestContext;
 import com.leumit.drivers.DriverManager;
@@ -15,10 +16,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * TestHooks - Cucumber hooks for setup and teardown
@@ -29,8 +32,14 @@ public class TestHooks {
     private final TestContext context = TestContext.getInstance();
     private final ConfigManager config = ConfigManager.getInstance();
     
-    // Cache for feature tests to create hierarchy
-    private static final Map<String, ExtentTest> featureMap = new HashMap<>();
+    // We'll use a ConcurrentHashMap to store features by their URI
+    private static final Map<String, ExtentTest> featureMap = new ConcurrentHashMap<>();
+    
+    // Track which scenarios have been processed by URI and scenario name
+    private static final Map<String, Boolean> processedScenarios = new ConcurrentHashMap<>();
+    
+    // Use a lock to synchronize feature node creation
+    private static final ReentrantLock featureLock = new ReentrantLock();
 
     @BeforeAll
     public static void beforeAll() {
@@ -45,6 +54,10 @@ public class TestHooks {
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportName);
         sparkReporter.config().setDocumentTitle("Leumit Automation Test Report");
         sparkReporter.config().setReportName("Cucumber BDD Tests");
+        sparkReporter.config().setTheme(Theme.STANDARD);
+        
+        // Configure report to combine tests by feature
+        sparkReporter.config().setTimelineEnabled(false);
         
         extentReports = new ExtentReports();
         extentReports.attachReporter(sparkReporter);
@@ -58,12 +71,21 @@ public class TestHooks {
         // Set platform to web
         context.setPlatform("web");
         
-        // Get feature name and create a hierarchical report structure
-        String featurePath = scenario.getUri().toString();
-        String featureName = extractFeatureName(featurePath);
+        // Get feature URI and name 
+        String featureUri = scenario.getUri().toString();
+        String featureName = extractFeatureName(featureUri);
         
-        // Get or create feature test
-        ExtentTest featureTest = getFeatureTest(featureName);
+        // Create a unique key for each scenario to ensure it's only processed once
+        String scenarioKey = featureUri + ":" + scenario.getName();
+        
+        // Check if scenario has been processed already - in case of retries
+        if (processedScenarios.containsKey(scenarioKey)) {
+            logger.info("Scenario already processed: {}", scenarioKey);
+            return;
+        }
+        
+        // Get or create feature test - using synchronized method for thread safety
+        ExtentTest featureTest = getFeatureTestSynchronized(featureUri, featureName);
         
         // Create scenario test node as child of feature
         ExtentTest scenarioNode = featureTest.createNode(scenario.getName());
@@ -74,6 +96,9 @@ public class TestHooks {
         
         // Save scenario to context
         context.setScenario(scenario);
+        
+        // Mark as processed
+        processedScenarios.put(scenarioKey, true);
         
         logger.info("Starting web scenario: {}", scenario.getName());
     }
@@ -87,12 +112,21 @@ public class TestHooks {
         String deviceName = config.getProperty("deviceNameAndroid");
         context.setDeviceName(deviceName);
         
-        // Get feature name and create a hierarchical report structure
-        String featurePath = scenario.getUri().toString();
-        String featureName = extractFeatureName(featurePath);
+        // Get feature URI and name
+        String featureUri = scenario.getUri().toString();
+        String featureName = extractFeatureName(featureUri);
         
-        // Get or create feature test
-        ExtentTest featureTest = getFeatureTest(featureName);
+        // Create a unique key for each scenario to ensure it's only processed once
+        String scenarioKey = featureUri + ":" + scenario.getName();
+        
+        // Check if scenario has been processed already - in case of retries
+        if (processedScenarios.containsKey(scenarioKey)) {
+            logger.info("Scenario already processed: {}", scenarioKey);
+            return;
+        }
+        
+        // Get or create feature test - using synchronized method for thread safety
+        ExtentTest featureTest = getFeatureTestSynchronized(featureUri, featureName);
         
         // Create scenario test node as child of feature
         ExtentTest scenarioNode = featureTest.createNode(scenario.getName() + " (" + deviceName + ")");
@@ -104,6 +138,9 @@ public class TestHooks {
         // Save scenario to context
         context.setScenario(scenario);
         
+        // Mark as processed
+        processedScenarios.put(scenarioKey, true);
+        
         logger.info("Starting mobile scenario: {} on device: {}", scenario.getName(), deviceName);
     }
     
@@ -113,14 +150,22 @@ public class TestHooks {
      * @return Formatted feature name
      */
     private String extractFeatureName(String featurePath) {
+        // Debug logging to understand what's happening
+        logger.info("Feature path from scenario: {}", featurePath);
+        
         // Extract filename from path and convert to title case
         if (featurePath != null && featurePath.contains("/")) {
             String fileName = featurePath.substring(featurePath.lastIndexOf('/') + 1);
+            logger.info("Extracted fileName: {}", fileName);
+            
             if (fileName.endsWith(".feature")) {
                 fileName = fileName.substring(0, fileName.indexOf(".feature"));
+                logger.info("After removing .feature: {}", fileName);
             }
             // Convert snake_case to Title Case
-            return formatFeatureName(fileName);
+            String formattedName = formatFeatureName(fileName);
+            logger.info("Formatted feature name: {}", formattedName);
+            return formattedName;
         }
         return "Unknown Feature";
     }
@@ -154,13 +199,36 @@ public class TestHooks {
     }
     
     /**
-     * Get or create a feature test node
-     * @param featureName Feature name
+     * Thread-safe method to get or create a feature test node
+     * Uses ReentrantLock to ensure only one thread can create a feature at a time
+     * 
+     * @param featureUri Feature URI used as the key
+     * @param featureName Display name for the feature
      * @return ExtentTest for the feature
      */
-    private ExtentTest getFeatureTest(String featureName) {
-        return featureMap.computeIfAbsent(featureName, 
-            name -> extentReports.createTest(name));
+    private ExtentTest getFeatureTestSynchronized(String featureUri, String featureName) {
+        // First try to get without locking (optimistic)
+        ExtentTest existingTest = featureMap.get(featureUri);
+        if (existingTest != null) {
+            return existingTest;
+        }
+        
+        // If not found, use a lock to prevent race conditions
+        featureLock.lock();
+        try {
+            // Check again in case another thread created it while we were waiting
+            existingTest = featureMap.get(featureUri);
+            if (existingTest != null) {
+                return existingTest;
+            }
+            
+            // Create new feature node
+            ExtentTest featureTest = extentReports.createTest(featureName);
+            featureMap.put(featureUri, featureTest);
+            return featureTest;
+        } finally {
+            featureLock.unlock();
+        }
     }
 
     @After("@web")
@@ -215,10 +283,16 @@ public class TestHooks {
         // Flush ExtentReports
         if (extentReports != null) {
             extentReports.flush();
+            // Print out how many feature nodes were created
+            logger.info("Created {} feature nodes in the report", featureMap.size());
+            // Print each feature URI for debugging
+            featureMap.keySet().forEach(uri -> logger.info("Feature URI: {}", uri));
+            logger.info("ProcessedScenarios size: {}", processedScenarios.size());
             logger.info("ExtentReports flushed and completed.");
         }
         
         // Clear cache
         featureMap.clear();
+        processedScenarios.clear();
     }
 } 
