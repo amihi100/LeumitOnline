@@ -11,7 +11,10 @@ import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.AfterStep;
+import com.aventstack.extentreports.Status;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +23,7 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -37,6 +41,9 @@ public class TestHooks {
     
     // Track which scenarios have been processed by URI and scenario name
     private static final Map<String, Boolean> processedScenarios = new ConcurrentHashMap<>();
+    
+    // Track which features have browsers initialized
+    private static final Set<String> initializedFeatures = ConcurrentHashMap.newKeySet();
     
     // Use a lock to synchronize feature node creation
     private static final ReentrantLock featureLock = new ReentrantLock();
@@ -75,6 +82,19 @@ public class TestHooks {
         String featureUri = scenario.getUri().toString();
         String featureName = extractFeatureName(featureUri);
         
+        // Debug logging to understand our feature tracking
+        logger.info("Checking if feature has a browser: {}", featureUri);
+        logger.info("Feature initialized status: {}", DriverManager.hasFeatureBrowser(featureUri));
+        
+        // Initialize browser only once per feature
+        if (!DriverManager.hasFeatureBrowser(featureUri)) {
+            logger.info("Initializing browser for feature: {}", featureName);
+            DriverManager.initializeDriverForFeature(featureUri);
+            logger.info("Feature is now initialized: {}", DriverManager.hasFeatureBrowser(featureUri));
+        } else {
+            logger.info("Browser already initialized for feature: {}", featureName);
+        }
+        
         // Create a unique key for each scenario to ensure it's only processed once
         String scenarioKey = featureUri + ":" + scenario.getName();
         
@@ -100,7 +120,7 @@ public class TestHooks {
         // Mark as processed
         processedScenarios.put(scenarioKey, true);
         
-        logger.info("Starting web scenario: {}", scenario.getName());
+        logger.info("Starting web scenario: {} in feature: {}", scenario.getName(), featureName);
     }
 
     @Before("@mobile")
@@ -231,7 +251,7 @@ public class TestHooks {
         }
     }
 
-    @After("@web")
+    @After(value = "@web", order = 10)
     public void afterWebScenario(Scenario scenario) {
         // Get ExtentTest
         ExtentTest test = context.getExtentTest();
@@ -244,10 +264,7 @@ public class TestHooks {
             test.pass("Scenario passed");
         }
         
-        // Close the web driver
-        DriverManager.closeBrowser();
-        
-        // Reset context for next scenario
+        // Only reset context, don't close browser yet
         context.reset();
         
         logger.info("Web scenario completed with status: {}", scenario.getStatus());
@@ -279,6 +296,7 @@ public class TestHooks {
     public static void afterAll() {
         // Close all drivers
         DriverManager.closeAllDrivers();
+        DriverManager.closeAllFeatureBrowsers();
         
         // Flush ExtentReports
         if (extentReports != null) {
@@ -294,5 +312,60 @@ public class TestHooks {
         // Clear cache
         featureMap.clear();
         processedScenarios.clear();
+    }
+
+    @BeforeStep
+    public void beforeStep(Scenario scenario) {
+        // Get current step text
+        String stepText = extractStepText(scenario);
+        if (stepText != null && !stepText.isEmpty()) {
+            // Log step name as INFO in report - simple version
+            ExtentTest test = context.getExtentTest();
+            if (test != null) {
+                test.log(Status.INFO, "STEP: " + stepText);
+            }
+            logger.info("Executing step: {}", stepText);
+        }
+    }
+    
+    @AfterStep
+    public void afterStep(Scenario scenario) {
+        // Optionally log step completion
+        if (scenario.isFailed()) {
+            String stepText = extractStepText(scenario);
+            if (stepText != null && !stepText.isEmpty()) {
+                ExtentTest test = context.getExtentTest();
+                if (test != null) {
+                    test.log(Status.FAIL, "FAILED STEP: " + stepText);
+                }
+            }
+        }
+    }
+    
+    /**
+     * Extract the current step text from the scenario
+     * @param scenario Cucumber scenario
+     * @return Step text or empty string if not available
+     */
+    private String extractStepText(Scenario scenario) {
+        try {
+            // Get the scenario's string representation
+            String scenarioString = scenario.toString();
+            
+            // Look for step text pattern
+            if (scenarioString.contains("Step [")) {
+                int stepStart = scenarioString.lastIndexOf("Step [") + 6; // +6 to skip "Step ["
+                int stepEnd = scenarioString.indexOf("]", stepStart);
+                
+                if (stepEnd > stepStart) {
+                    return scenarioString.substring(stepStart, stepEnd);
+                }
+            }
+            
+            return "";
+        } catch (Exception e) {
+            logger.error("Error extracting step text", e);
+            return "";
+        }
     }
 } 

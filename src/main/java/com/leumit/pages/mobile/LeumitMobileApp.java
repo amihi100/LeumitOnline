@@ -22,6 +22,9 @@ public class LeumitMobileApp extends BasePageMobile {
     private static final By SPLASH_SCREEN = By.id("splash_image");
     private static final By HOME_SCREEN = By.id("home_container");
     
+    // Last measured load time
+    private long lastLoadTime = 0;
+    
     // Page elements using PageFactory
     @AndroidFindBy(id = "splash_image")
     @iOSXCUITFindBy(accessibility = "splash_image")
@@ -37,6 +40,22 @@ public class LeumitMobileApp extends BasePageMobile {
      */
     public LeumitMobileApp(AppiumDriver driver) {
         super(driver);
+    }
+    
+    /**
+     * Get the app package name
+     * @return App package name
+     */
+    public String getAppPackage() {
+        return APP_PACKAGE;
+    }
+    
+    /**
+     * Get the last measured app load time in milliseconds
+     * @return App load time in milliseconds
+     */
+    public long getLastLoadTime() {
+        return lastLoadTime;
     }
     
     /**
@@ -65,10 +84,16 @@ public class LeumitMobileApp extends BasePageMobile {
     public boolean isAppFullyLoaded() {
         logger.info("Checking if app is fully loaded");
         try {
+            long startTime = System.currentTimeMillis();
+            
             // First wait for splash screen
             wait.until(ExpectedConditions.visibilityOfElementLocated(SPLASH_SCREEN));
             // Then wait for home screen
             wait.until(ExpectedConditions.visibilityOfElementLocated(HOME_SCREEN));
+            
+            lastLoadTime = System.currentTimeMillis() - startTime;
+            logger.info("App fully loaded in {} ms", lastLoadTime);
+            
             return true;
         } catch (Exception e) {
             logger.error("App failed to load completely", e);

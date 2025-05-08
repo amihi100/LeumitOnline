@@ -8,6 +8,9 @@ import io.appium.java_client.AppiumDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * DriverManager - Manages browser and mobile drivers with thread safety
  */
@@ -17,18 +20,82 @@ public class DriverManager {
     private static final ThreadLocal<Browser> browserThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<Page> pageThreadLocal = new ThreadLocal<>();
     private static final ThreadLocal<AppiumDriver> mobileDriverThreadLocal = new ThreadLocal<>();
+    private static final ConcurrentHashMap<Long, Boolean> initializedDrivers = new ConcurrentHashMap<>();
+    
+    // Store browsers for each feature
+    private static final Map<String, Browser> featureBrowsers = new ConcurrentHashMap<>();
+    private static final Map<String, Page> featurePages = new ConcurrentHashMap<>();
+    private static final Map<String, Playwright> featurePlaywrights = new ConcurrentHashMap<>();
+
+    /**
+     * Initialize the driver for the current thread
+     */
+    public static void initializeDriver() {
+        long threadId = Thread.currentThread().getId();
+        if (!initializedDrivers.containsKey(threadId)) {
+            logger.info("Created new Playwright instance for thread: {}", threadId);
+            playwrightThreadLocal.set(Playwright.create());
+            browserThreadLocal.set(DriverFactory.createBrowser());
+            pageThreadLocal.set(DriverFactory.createPage(browserThreadLocal.get()));
+            initializedDrivers.put(threadId, true);
+        }
+    }
+    
+    /**
+     * Initialize the driver for a specific feature
+     * @param featureUri The feature URI to initialize a driver for
+     * @return true if a new browser was initialized, false if one already existed
+     */
+    public static synchronized boolean initializeDriverForFeature(String featureUri) {
+        if (!featureBrowsers.containsKey(featureUri)) {
+            Playwright playwright = Playwright.create();
+            featurePlaywrights.put(featureUri, playwright);
+            
+            Browser browser = DriverFactory.createBrowser(playwright);
+            featureBrowsers.put(featureUri, browser);
+            
+            Page page = DriverFactory.createPage(browser);
+            featurePages.put(featureUri, page);
+            
+            logger.info("Initialized new browser for feature: {}", featureUri);
+            return true;
+        }
+        logger.info("Reusing existing browser for feature: {}", featureUri);
+        return false;
+    }
+    
+    /**
+     * Get the page for a specific feature
+     * @param featureUri The feature URI
+     * @return The Page instance for the feature
+     */
+    public static synchronized Page getPageForFeature(String featureUri) {
+        return featurePages.get(featureUri);
+    }
+    
+    /**
+     * Get the browser for a specific feature
+     * @param featureUri The feature URI
+     * @return The Browser instance for the feature 
+     */
+    public static synchronized Browser getBrowserForFeature(String featureUri) {
+        return featureBrowsers.get(featureUri);
+    }
+    
+    /**
+     * Check if the feature has a browser initialized
+     * @param featureUri The feature URI
+     * @return true if the feature has a browser initialized
+     */
+    public static synchronized boolean hasFeatureBrowser(String featureUri) {
+        return featureBrowsers.containsKey(featureUri);
+    }
 
     /**
      * Get or create a new Playwright Page for web testing
      * @return Playwright Page
      */
     public static synchronized Page getPage() {
-        if (pageThreadLocal.get() == null) {
-            Browser browser = getBrowser();
-            Page page = DriverFactory.createPage(browser);
-            pageThreadLocal.set(page);
-            logger.info("Created new Playwright Page for thread: {}", Thread.currentThread().getId());
-        }
         return pageThreadLocal.get();
     }
 
@@ -37,12 +104,6 @@ public class DriverManager {
      * @return Playwright Browser
      */
     public static synchronized Browser getBrowser() {
-        if (browserThreadLocal.get() == null) {
-            Playwright playwright = getPlaywright();
-            Browser browser = DriverFactory.createBrowser();
-            browserThreadLocal.set(browser);
-            logger.info("Created new Browser for thread: {}", Thread.currentThread().getId());
-        }
         return browserThreadLocal.get();
     }
 
@@ -51,11 +112,6 @@ public class DriverManager {
      * @return Playwright instance
      */
     public static synchronized Playwright getPlaywright() {
-        if (playwrightThreadLocal.get() == null) {
-            Playwright playwright = Playwright.create();
-            playwrightThreadLocal.set(playwright);
-            logger.info("Created new Playwright instance for thread: {}", Thread.currentThread().getId());
-        }
         return playwrightThreadLocal.get();
     }
 
@@ -99,6 +155,51 @@ public class DriverManager {
                 logger.error("Error closing Browser", e);
             } finally {
                 browserThreadLocal.remove();
+            }
+        }
+
+        long threadId = Thread.currentThread().getId();
+        initializedDrivers.remove(threadId);
+    }
+    
+    /**
+     * Close the browser for a specific feature
+     * @param featureUri The feature URI
+     */
+    public static synchronized void closeBrowserForFeature(String featureUri) {
+        Page page = featurePages.get(featureUri);
+        if (page != null) {
+            try {
+                page.close();
+                logger.info("Closed Page for feature: {}", featureUri);
+            } catch (Exception e) {
+                logger.error("Error closing Page for feature: {}", featureUri, e);
+            } finally {
+                featurePages.remove(featureUri);
+            }
+        }
+
+        Browser browser = featureBrowsers.get(featureUri);
+        if (browser != null) {
+            try {
+                browser.close();
+                logger.info("Closed Browser for feature: {}", featureUri);
+            } catch (Exception e) {
+                logger.error("Error closing Browser for feature: {}", featureUri, e);
+            } finally {
+                featureBrowsers.remove(featureUri);
+            }
+        }
+        
+        Playwright playwright = featurePlaywrights.get(featureUri);
+        if (playwright != null) {
+            try {
+                playwright.close();
+                logger.info("Closed Playwright for feature: {}", featureUri);
+            } catch (Exception e) {
+                logger.error("Error closing Playwright for feature: {}", featureUri, e);
+            } finally {
+                featurePlaywrights.remove(featureUri);
             }
         }
     }
@@ -145,5 +246,18 @@ public class DriverManager {
         closeMobileDriver();
         closePlaywright();
         logger.info("Closed all drivers for thread: {}", Thread.currentThread().getId());
+    }
+    
+    /**
+     * Close all feature browsers
+     */
+    public static synchronized void closeAllFeatureBrowsers() {
+        for (String featureUri : featureBrowsers.keySet()) {
+            closeBrowserForFeature(featureUri);
+        }
+        featureBrowsers.clear();
+        featurePages.clear();
+        featurePlaywrights.clear();
+        logger.info("Closed all feature browsers");
     }
 } 

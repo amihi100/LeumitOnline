@@ -25,8 +25,17 @@ public class WebSteps {
      */
     private LeumitHomePage getHomePage() {
         if (homePage == null) {
-            Page page = DriverManager.getPage();
-            homePage = new LeumitHomePage(page);
+            // Get the current feature URI from the scenario
+            String featureUri = context.getScenario().getUri().toString();
+            // Get the page for this feature
+            Page page = DriverManager.getPageForFeature(featureUri);
+            if (page != null) {
+                homePage = new LeumitHomePage(page);
+            } else {
+                // Fallback to thread-local page
+                page = DriverManager.getPage();
+                homePage = new LeumitHomePage(page);
+            }
         }
         return homePage;
     }
@@ -91,7 +100,16 @@ public class WebSteps {
     @And("I close the browser")
     public void iCloseTheBrowser() {
         logger.info("Closing the browser");
-        DriverManager.closeBrowser();
+        // Get the current feature URI from the scenario
+        String featureUri = context.getScenario().getUri().toString();
+        
+        // Close the browser for this feature
+        if (DriverManager.hasFeatureBrowser(featureUri)) {
+            DriverManager.closeBrowserForFeature(featureUri);
+        } else {
+            // Fallback to thread-local browser
+            DriverManager.closeBrowser();
+        }
     }
     
     @Then("Assert browser is closed")

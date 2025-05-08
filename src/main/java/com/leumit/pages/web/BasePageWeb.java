@@ -1,114 +1,117 @@
 package com.leumit.pages.web;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.leumit.context.TestContext;
+import com.leumit.drivers.DriverManager;
 import com.microsoft.playwright.Page;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Base class for all web page objects
+ * BasePageWeb - Base class for web page objects
  */
-public abstract class BasePageWeb {
-    protected static final Logger logger = LoggerFactory.getLogger(BasePageWeb.class);
-    protected final Page page;
-    protected final TestContext context;
-    protected final ExtentTest reporter;
-
+public class BasePageWeb {
+    private static final Logger logger = LoggerFactory.getLogger(BasePageWeb.class);
+    protected Page page;
+    
     /**
      * Constructor for BasePageWeb
      * @param page Playwright Page object
      */
     public BasePageWeb(Page page) {
         this.page = page;
-        this.context = TestContext.getInstance();
-        this.reporter = context.getExtentTest();
     }
-
+    
+    /**
+     * Get the current page or initialize it if null
+     * @return Playwright Page object
+     */
+    protected Page getPage() {
+        if (page == null) {
+            page = DriverManager.getPage();
+        }
+        return page;
+    }
+    
     /**
      * Navigate to a URL
      * @param url URL to navigate to
-     * @return This page object
      */
-    public BasePageWeb navigate(String url) {
+    public void navigate(String url) {
         logger.info("Navigating to URL: {}", url);
-        page.navigate(url);
-        return this;
+        getPage().navigate(url);
     }
-
+    
+    /**
+     * Check if an element is visible
+     * @param selector CSS selector for the element
+     * @return True if the element is visible
+     */
+    public boolean isElementVisible(String selector) {
+        try {
+            return getPage().isVisible(selector);
+        } catch (Exception e) {
+            logger.error("Error checking if element is visible: {}", selector, e);
+            return false;
+        }
+    }
+    
+    /**
+     * Check if an element exists
+     * @param selector CSS selector for the element
+     * @return True if the element exists
+     */
+    public boolean elementExists(String selector) {
+        try {
+            return getPage().querySelector(selector) != null;
+        } catch (Exception e) {
+            logger.error("Error checking if element exists: {}", selector, e);
+            return false;
+        }
+    }
+    
+    /**
+     * Click on an element
+     * @param selector CSS selector for the element
+     */
+    public void click(String selector) {
+        logger.info("Clicking on element: {}", selector);
+        getPage().click(selector);
+    }
+    
+    /**
+     * Type text into an element
+     * @param selector CSS selector for the element
+     * @param text Text to type
+     */
+    public void type(String selector, String text) {
+        logger.info("Typing text into element: {}", selector);
+        getPage().fill(selector, text);
+    }
+    
+    /**
+     * Get text from an element
+     * @param selector CSS selector for the element
+     * @return Text content of the element
+     */
+    public String getText(String selector) {
+        return getPage().textContent(selector);
+    }
+    
     /**
      * Get the page title
      * @return Page title
      */
     public String getTitle() {
-        return page.title();
+        return getPage().title();
     }
-
+    
     /**
-     * Check if element is visible
-     * @param selector CSS or XPath selector
-     * @return True if element is visible
-     */
-    public boolean isElementVisible(String selector) {
-        try {
-            return page.isVisible(selector);
-        } catch (Exception e) {
-            logger.error("Error checking element visibility: {}", selector, e);
-            return false;
-        }
-    }
-
-    /**
-     * Click on an element
-     * @param selector CSS or XPath selector
-     * @return This page object
-     */
-    public BasePageWeb click(String selector) {
-        logger.info("Clicking element: {}", selector);
-        page.click(selector);
-        return this;
-    }
-
-    /**
-     * Fill a form field
-     * @param selector CSS or XPath selector
-     * @param text Text to fill
-     * @return This page object
-     */
-    public BasePageWeb fill(String selector, String text) {
-        logger.info("Filling element: {} with text: {}", selector, text);
-        page.fill(selector, text);
-        return this;
-    }
-
-    /**
-     * Get text from an element
-     * @param selector CSS or XPath selector
-     * @return Element text
-     */
-    public String getText(String selector) {
-        return page.textContent(selector);
-    }
-
-    /**
-     * Wait for element to be visible
-     * @param selector CSS or XPath selector
-     * @return This page object
-     */
-    public BasePageWeb waitForElement(String selector) {
-        page.waitForSelector(selector);
-        return this;
-    }
-
-    /**
-     * Measure page load time
+     * Measure page load time in milliseconds
      * @return Page load time in milliseconds
      */
     public long measurePageLoadTime() {
-        Object loadTime = page.evaluate("() => {" +
-                "const timing = window.performance.timing;" +
-                "return timing.loadEventEnd - timing.navigationStart;" +
-                "}");
-        return loadTime instanceof Number ? ((Number) loadTime).longValue() : 0;
+        long startTime = System.currentTimeMillis();
+        getPage().waitForLoadState();
+        long endTime = System.currentTimeMillis();
+        return endTime - startTime;
     }
 } 

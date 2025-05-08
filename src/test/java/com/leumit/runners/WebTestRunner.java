@@ -1,8 +1,10 @@
 package com.leumit.runners;
 
+import com.leumit.drivers.DriverManager;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.AfterClass;
 
 /**
  * WebTestRunner - Test runner for web Cucumber tests
@@ -19,18 +21,25 @@ import org.testng.annotations.DataProvider;
         "rerun:target/failed_scenarios.txt"
     },
     monochrome = true,
-    tags = "@web",
-    name = "WebTest"
+    tags = "@web"
 )
 public class WebTestRunner extends AbstractTestNGCucumberTests {
     
     /**
-     * Run scenarios in parallel
+     * Run scenarios sequentially to share browser per feature
      * @return Scenario data provider
      */
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
+    }
+    
+    /**
+     * Clean up all resources after the test class runs
+     */
+    @AfterClass
+    public void cleanUp() {
+        DriverManager.closeAllFeatureBrowsers();
     }
 } 

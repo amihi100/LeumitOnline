@@ -36,7 +36,21 @@ public class DriverFactory {
         
         logger.info("Creating {} browser, headless: {}", browserName, headless);
         
-        Playwright playwright = Playwright.create();
+        Playwright playwright = DriverManager.getPlaywright();
+        
+        return createBrowser(playwright);
+    }
+    
+    /**
+     * Create a Playwright browser instance with provided Playwright instance
+     * @param playwright Playwright instance to use
+     * @return Playwright browser instance
+     */
+    public static Browser createBrowser(Playwright playwright) {
+        String browserName = config.getProperty("browser", "chrome").toLowerCase();
+        boolean headless = config.getBooleanProperty("headless", false);
+        
+        logger.info("Creating {} browser, headless: {}", browserName, headless);
         
         return switch (browserName) {
             case "firefox" -> playwright.firefox().launch(

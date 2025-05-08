@@ -1,158 +1,154 @@
-# LeumitOnline Automation Framework
+# Leumit Online Test Automation Framework
 
-A professional cross-platform (Windows and Mac) Java automation framework for web and mobile testing of the Leumit Healthcare Services application.
+This project contains automated tests for the Leumit website using Playwright, Cucumber, and TestNG.
 
-## 🧱 Technology Stack
+## Prerequisites
 
-- Java 19+
-- Maven
-- TestNG
-- Playwright Java (for Web testing)
-- Appium Java client (for Mobile testing)
-- ExtentReports (for reporting)
-- Cucumber (for BDD)
-- AssertUtils (custom assertions)
-- Log4j2/SLF4J for logging
+- Java 19 or higher
+- Maven 3.8.0 or higher
+- Chrome browser installed
 
-## 📂 Project Structure
-
-The project follows OOP and SOLID principles with the following structure:
+## Project Structure
 
 ```
 src/
-├── main/
-│   └── java/com/leumit/
-│       ├── context/
-│       │   └── TestContext.java
-│       ├── drivers/
-│       │   ├── DriverFactory.java
-│       │   └── DriverManager.java
-│       ├── pages/
-│       │   ├── web/
-│       │   └── mobile/
-│       ├── utils/
-│       │   └── AssertUtils.java
-│       └── config/
-│           └── ConfigManager.java
-├── test/
-│   └── java/com/leumit/
-│       ├── hooks/
-│       │   └── TestHooks.java
-│       ├── runners/
-│       │   ├── WebTestRunner.java
-│       │   └── MobileTestRunner.java
-│       └── steps/
-│           ├── WebSteps.java
-│           └── MobileSteps.java
-└── resources/
-    ├── features/
-    │   ├── web/
-    │   └── mobile/
-    └── config.properties
+├── main/java/com/leumit/
+│   ├── config/         # Configuration management
+│   ├── drivers/        # WebDriver and Playwright setup
+│   ├── pages/          # Page Object Models
+│   ├── steps/          # Step definitions
+│   └── utils/          # Utility classes
+└── test/
+    ├── java/com/leumit/
+    │   ├── hooks/      # Cucumber hooks
+    │   └── runners/    # Test runners
+    └── resources/
+        ├── config/     # Configuration files
+        └── features/   # Cucumber feature files
 ```
 
-## 🔍 Key Components
+## Running Tests
 
-- **TestContext**: Thread-safe singleton using ThreadLocal for test data
-- **DriverFactory**: Creates Playwright or Appium driver based on platform/test
-- **DriverManager**: Uses ThreadLocal, synchronized with TestContext, handles cleanup
-- **Page Objects**: For both Web and Mobile testing
-- **AssertUtils**: Custom assertion utilities with ExtentReports integration
-
-## 🧪 Test Execution
-
-### Running Tests
-
-To build the project without running tests:
-```
-mvn clean install -DskipTests
-```
+### Basic Test Execution
 
 To run all tests:
-```
+```bash
 mvn clean test
 ```
 
-To run tests and generate detailed reports:
-```
-mvn clean verify
-```
+### Running Specific Test Types
 
-To run only web tests:
-```
-mvn clean test -Dcucumber.filter.tags="@web"
-```
-
-To run only mobile tests:
-```
-mvn clean test -Dcucumber.filter.tags="@mobile"
-```
-
-To run specific test categories:
-```
-# Performance tests only
-mvn clean test -Dcucumber.filter.tags="@performance"
-
-# UI tests only
-mvn clean test -Dcucumber.filter.tags="@ui"
-```
-
-To run test combinations:
-```
-# Web performance tests
-mvn clean test -Dcucumber.filter.tags="@web and @performance"
-
-# Web UI tests
-mvn clean test -Dcucumber.filter.tags="@web and @ui" 
-
-# Mobile install tests
-mvn clean test -Dcucumber.filter.tags="@mobile and @install"
-```
-
-To run with specific configuration:
-```
-# Run with Firefox browser
-mvn clean test -Dcucumber.filter.tags="@web" -Dbrowser=firefox
-
-# Run in headless mode
-mvn clean test -Dcucumber.filter.tags="@web" -Dheadless=true
-```
-
-To run specific test runners:
-```
-# Run web tests only using WebTestRunner
+1. Web Tests:
+```bash
 mvn clean test -Dtest=WebTestRunner
+```
 
-# Run mobile tests only using MobileTestRunner
-mvn clean test -Dtest=MobileTestRunner
+2. API Tests:
+```bash
+mvn clean test -Dtest=ApiTestRunner
+```
+
+### Running Tests with Tags
+
+The framework supports several tags for test categorization:
+
+- `@web` - Web UI tests
+- `@api` - API tests
+- `@ui` - UI-specific tests
+- `@performance` - Performance tests
+- `@smoke` - Smoke tests
+
+Examples:
+
+1. Run all web tests except UI tests:
+```bash
+mvn clean test -Dtest=WebTestRunner -Dcucumber.filter.tags="@web and not @ui"
+```
+
+2. Run only performance tests:
+```bash
+mvn clean test -Dtest=WebTestRunner -Dcucumber.filter.tags="@performance"
+```
+
+3. Run smoke tests for both web and API:
+```bash
+mvn clean test -Dtest=WebTestRunner -Dcucumber.filter.tags="@smoke"
 ```
 
 ### Test Reports
 
 After test execution, reports are generated in:
-- Cucumber HTML Reports: `target/cucumber-reports/html/`
-- ExtentReports: `target/extent-reports/`
-- Screenshots (on failures): `target/screenshots/`
+- Extent Reports: `target/extent-reports/`
+- Cucumber Reports: `target/cucumber-reports/`
 
-## 🔧 Configuration
+## Configuration
 
-Configuration can be modified in:
-```
-src/test/resources/config/config.properties
-```
+The framework uses a properties file for configuration:
+- Location: `src/test/resources/config/config.properties`
+- Contains settings for:
+  - Browser type
+  - Headless mode
+  - Timeouts
+  - URLs
+  - API endpoints
 
-You can also override configuration via command line:
-```
-mvn test -Dbrowser=firefox -Dheadless=true
-```
+## Browser Management
 
-## 🧰 Thread Safety
+- Each **scenario** runs in its own browser instance
+- A new browser is created at the start of each scenario
+- The browser is automatically closed after each scenario completes
+- This ensures complete isolation between scenarios
+- Parallel execution is supported with each scenario having its own browser
+- Default browser is Chrome (non-headless)
 
-All shared resources (drivers, test data, ExtentReports) use ThreadLocal to ensure thread safety for parallel test execution.
+## Logging
 
-## 📊 Reporting Features
+- Logs are written to `logs/` directory
+- Log level can be configured in `log4j2.xml`
+- Each test run creates a new log file with timestamp
 
-- Parent/child ExtentTests
-- Screenshot capturing on failure
-- Performance metrics
-- Multi-platform reporting 
+## Best Practices
+
+1. **Tag Usage**:
+   - Use `@web` for all web tests
+   - Use `@api` for all API tests
+   - Use `@ui` for UI-specific tests
+   - Use `@performance` for performance tests
+   - Use `@smoke` for smoke tests
+
+2. **Test Organization**:
+   - Keep feature files focused and small
+   - Use meaningful scenario names
+   - Follow the Given-When-Then format
+   - Reuse step definitions when possible
+
+3. **Page Objects**:
+   - Keep page objects clean and focused
+   - Use meaningful method names
+   - Handle waits and timeouts appropriately
+   - Use the base page for common functionality
+
+## Troubleshooting
+
+1. **Browser Issues**:
+   - Ensure Chrome is installed and up to date
+   - Check browser driver versions match
+   - Verify headless mode settings
+
+2. **Test Failures**:
+   - Check the test reports for detailed failure information
+   - Verify the application is accessible
+   - Check network connectivity
+   - Review logs for additional details
+
+## Contributing
+
+1. Create a new branch for your changes
+2. Follow the existing code style
+3. Add appropriate tests
+4. Update documentation as needed
+5. Submit a pull request
+
+## License
+
+This project is proprietary and confidential. 

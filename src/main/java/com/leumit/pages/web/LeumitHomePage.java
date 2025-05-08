@@ -51,9 +51,9 @@ public class LeumitHomePage extends BasePageWeb {
         logger.info("Checking if identification field is visible");
         
         // Try to detect and switch to iframe if needed
-        if (page.frames().size() > 1) {
+        if (getPage().frames().size() > 1) {
             logger.info("Multiple frames detected, attempting to search in all frames");
-            for (com.microsoft.playwright.Frame frame : page.frames()) {
+            for (com.microsoft.playwright.Frame frame : getPage().frames()) {
                 try {
                     if (frame.isVisible(IDENTIFICATION_FIELD)) {
                         logger.info("Found identification field in frame: {}", frame.name());
@@ -76,9 +76,9 @@ public class LeumitHomePage extends BasePageWeb {
         logger.info("Checking if password field is visible");
         
         // Try to detect and switch to iframe if needed
-        if (page.frames().size() > 1) {
+        if (getPage().frames().size() > 1) {
             logger.info("Multiple frames detected, attempting to search in all frames");
-            for (com.microsoft.playwright.Frame frame : page.frames()) {
+            for (com.microsoft.playwright.Frame frame : getPage().frames()) {
                 try {
                     if (frame.isVisible(PASSWORD_FIELD)) {
                         logger.info("Found password field in frame: {}", frame.name());
